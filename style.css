@@ -79,10 +79,10 @@ button:hover {
 
     background:
     linear-gradient(
-    rgba(6,26,51,0.85),
-    rgba(6,26,51,0.75)
+rgba(6,26,51,0.72),
+rgba(6,26,51,0.55)
     ),
-    url("images/hero.jpg");
+    url("images/hero.png");
 
     background-size: cover;
     background-position: center;
@@ -512,4 +512,46 @@ padding:20px;
 
 border-top:1px solid #333;
 
+}
+.logo img {
+    display: block;
+    width: 180px;
+    height: auto;
+}
+
+.logo a {
+    display: block;
+    text-decoration: none;
+}
+header {
+    background: #ffffff;
+    min-height: 120px;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    display: block;
+    width: 170px;
+    height: auto;
+}
+
+.logo a {
+    display: block;
+    text-decoration: none;
+}
+
+header nav a {
+    color: #071d35;
+}
+
+header nav a:hover {
+    color: #d99a08;
+}
+
+header nav button {
+    background: #d99a08;
+    color: #ffffff;
 }
