@@ -2,113 +2,328 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    line-height: 1.6;
+    color: #061A33;
+    background: white;
 }
 
+
+/* HEADER */
 
 header {
-    background: #12355b;
+    background: #061A33;
     color: white;
-    text-align: center;
-    padding: 40px 20px;
+    padding: 25px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
-header h1 {
-    font-size: 42px;
-    letter-spacing: 2px;
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
 }
 
 
-header p {
-    font-size: 20px;
-    margin-top: 10px;
+.logo span {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #D99A18;
 }
+
 
 
 nav {
-    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    font-size: 14px;
     font-weight: bold;
 }
 
 
-nav a:hover {
-    text-decoration: underline;
+button {
+    background: #D99A18;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-weight: bold;
+    cursor: pointer;
 }
+
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+/* HERO */
 
 
 .hero {
-    background: #eef5f8;
-    text-align: center;
-    padding: 80px 20px;
+
+    min-height: 550px;
+
+    background:
+    linear-gradient(
+    rgba(6,26,51,0.85),
+    rgba(6,26,51,0.75)
+    ),
+    url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display:flex;
+    align-items:center;
+
+    padding:60px;
+
 }
 
 
-.hero h2 {
-    font-size: 36px;
-    color: #12355b;
+.hero-text {
+
+    max-width:600px;
+    color:white;
+
+}
+
+
+.hero h1 {
+
+    font-size:52px;
+    line-height:1.2;
+
+}
+
+
+.hero h1 span {
+
+    color:#D99A18;
+
 }
 
 
 .hero p {
-    max-width: 800px;
-    margin: 20px auto;
-    font-size: 18px;
+
+    margin:30px 0;
+    font-size:18px;
+    line-height:1.6;
+
 }
 
 
-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 50px 20px;
+.outline {
+
+    background:transparent;
+    border:1px solid #D99A18;
+    margin-left:15px;
+
 }
 
 
-section h2 {
-    text-align: center;
-    color: #12355b;
-    margin-bottom: 25px;
-    font-size: 30px;
+
+/* ADVANTAGES */
+
+
+.advantages {
+
+    background:#071D36;
+    color:white;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    padding:35px 60px;
+    gap:20px;
+
 }
+
+
+.advantages h3 {
+
+    color:#D99A18;
+    margin-bottom:10px;
+
+}
+
+
+
+.advantages p {
+
+    font-size:14px;
+
+}
+
+
+
+/* PRODUCTS */
 
 
 .products {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+
+    padding:70px 60px;
+    text-align:center;
+
 }
 
 
-.products div {
-    background: #f5f5f5;
-    padding: 25px;
-    width: 30%;
-    text-align: center;
-    border-radius: 8px;
+.products h2 {
+
+    font-size:36px;
+    margin-bottom:40px;
+
 }
 
 
-.products h3 {
-    color: #12355b;
-    margin-bottom: 15px;
+
+.cards {
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+
 }
+
+
+
+.card {
+
+    padding:35px 20px;
+    border:1px solid #ddd;
+    background:white;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+
+
+.card h3 {
+
+    color:#061A33;
+    margin-bottom:20px;
+
+}
+
+
+.card p {
+
+    color:#555;
+    line-height:1.6;
+
+}
+
+
+
+/* ABOUT */
+
+
+.about {
+
+    background:#061A33;
+    color:white;
+
+    padding:70px 120px;
+
+    text-align:center;
+
+}
+
+
+.about h2 {
+
+    color:#D99A18;
+    margin-bottom:25px;
+
+}
+
+
+.about p {
+
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+
+}
+
+
+
+/* FOOTER */
 
 
 footer {
-    background: #eeeeee;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+
+    background:#020B18;
+    color:white;
+
+    padding:30px;
+    text-align:center;
+
+}
+
+
+footer p {
+
+    margin:10px;
+
+}
+
+
+
+/* MOBILE */
+
+
+@media(max-width:900px){
+
+header {
+
+    flex-direction:column;
+    gap:20px;
+
+}
+
+
+nav {
+
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+
+.hero h1 {
+
+    font-size:36px;
+
+}
+
+
+.advantages,
+.cards {
+
+grid-template-columns:1fr;
+
+}
+
+}
+.hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 650px;
 }
